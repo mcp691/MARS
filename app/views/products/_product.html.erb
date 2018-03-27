@@ -1,0 +1,13 @@
+<div class="card" style="width: 18rem;">
+  <%= link_to image_tag(product.image_url, class: "card-img-top"), product %>
+  <div class="card-body">
+    <h2 class="card-text"><%= product.name %></h2>
+    <br>
+    <p class="card-text"><%= product.category %></p>
+    <%= number_to_currency(product.price/100.to_f) %>
+    <br>
+    <%= link_to 'Show', product %>
+    <%= link_to 'Edit', edit_product_path(product) %>
+    <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+</div>

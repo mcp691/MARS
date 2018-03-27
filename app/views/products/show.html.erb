@@ -1,0 +1,24 @@
+<div class="container">
+  <%= link_to image_tag(@product.image_url, class: "img-fluid"), @product %>
+  <div class="prod-desc">
+    <h1 class="header">
+      <%= @product.name %>
+    </h1>
+
+    <p wrap="hard">
+      <%= @product.description %>
+    </p>
+
+    <strong>Price:</strong>
+    <h4>
+      <%= number_to_currency(@product.price/100.to_f) %>
+    </h4>
+
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %>
+  </div>
+</div>
+
+<div class="comm-container">
+
+</div>

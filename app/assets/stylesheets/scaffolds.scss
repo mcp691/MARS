@@ -1,0 +1,161 @@
+@import url('//fonts.googleapis.com/css?family=Oswald');
+
+* {
+  margin: 0px;
+}
+
+.header,
+.logo,
+h1,
+h2 {
+  font-family: 'Oswald', sans-serif;
+}
+
+body {
+  height: 100%;
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+
+  &:visited {
+    color: #666;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+th {
+  padding-bottom: 5px;
+}
+
+td {
+  padding: 0 5px 7px;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+label {
+  display: block;
+}
+
+.site-body {
+  margin: 2% 10% 5% 5%;
+}
+
+.carousel-caption h2 {
+  color:black;
+  background-color:white;
+  font-size: 1.2rem;
+}
+
+.card,
+.prod-cards {
+  margin: 1%;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+
+a.nav-link {
+  color: white;
+  font-size: 1.2rem;
+}
+
+a.navbar-brand {
+  font-size: 2rem;
+}
+
+p.alert.alert-dark {
+  font-size: 1.5rem;
+}
+
+p.notice.alert-dark {
+  font-size: 1.5rem;
+}
+
+.prod-desc {
+  display:inline-block;
+  margin: 5% 0 1% 5%;
+  font-size: 1em;
+  max-width: 40%;
+}
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin: 2% 5% 0 5%;
+  margin-bottom: -142px;
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+/*Sticky Footer*/
+.site-footer, .page-wrap:after {
+  height: 142px;
+}
+
+.site-footer {
+  background: #383c42;
+  color: white;
+}
+/*end of Sticky Footer*/
