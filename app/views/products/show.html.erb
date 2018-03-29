@@ -9,6 +9,10 @@
       <%= @product.description %>
     </p>
 
+    <p>
+      <div class="rated" data-score="<%= @product.average_rating %>"></div>
+    </p>
+
     <strong>Price:</strong>
     <h4>
       <%= number_to_currency(@product.price/100.to_f) %>
@@ -18,7 +22,10 @@
     <%= link_to 'Back', products_path %>
 
   </div>
-  <div class="comm-container">
-    <%= @product.highest_rating_comment %>
+  <br>
+  <br>
+  <div class="col-lg-8">
+    <%= render 'new_comment' %>
+    <%= render 'comments' %>
   </div>
 </div>

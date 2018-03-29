@@ -3,7 +3,9 @@
   <div class="card-body">
     <h2 class="card-text"><%= product.name %></h2>
     <br>
-    <p class="card-text"><%= product.category %></p>
+    <p>
+      <div class="rated" data-score="<%= product.average_rating %>"></div>
+    </p>
     <%= number_to_currency(product.price/100.to_f) %>
     <br>
     <%= link_to 'Show', product %>
