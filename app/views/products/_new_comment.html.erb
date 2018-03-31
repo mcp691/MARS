@@ -3,11 +3,11 @@
   <%= form_for([@product, @product.comments.build]) do |f| %>
 
     <p>
-      <%= f.text_area :body, placeholder: "Review product here...", class: "form-control", rows: 5 %>
+      <div class="rating"></div> <!-- Raty rating system -->
     </p>
 
     <p>
-      <div class="rating"></div> <!-- Raty rating system -->
+      <%= f.text_area :body, placeholder: "Review product here...", class: "form-control", rows: 5 %>
     </p>
 
     <p>
