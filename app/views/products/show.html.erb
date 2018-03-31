@@ -1,5 +1,5 @@
 <div class="container">
-  <%= link_to image_tag(@product.image_url, class: "img-fluid"), @product %>
+  <%= image_tag(@product.image_url, width: "525", class: "img-fluid img-zoom", data_zoom_image: @product.image_url) %>
   <div class="prod-desc">
     <h1 class="header">
       <%= @product.name %>
