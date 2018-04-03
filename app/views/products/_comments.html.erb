@@ -1,8 +1,6 @@
   <h4>Reviews:</h4>
 <div class="product-reviews">
-  <% @comments.each do |comment| %>
-  <%= render comment %>
-  <% end %>
+  <%= render @comments.reverse %>
   <div class="digg_pagination">
     <%= will_paginate @comments, :container => true %>
   </div>
