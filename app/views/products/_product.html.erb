@@ -1,3 +1,4 @@
+<% cache product do %>
 <div class="card" style="width: 18rem;">
   <%= link_to image_tag(product.image_url, class: "card-img-top"), product %>
   <div class="card-body">
@@ -14,3 +15,4 @@
     <% end %>
   </div>
 </div>
+<% end %>

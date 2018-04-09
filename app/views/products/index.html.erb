@@ -3,11 +3,13 @@
 <h1>Products</h1>
 
 <div class="prod-cards row">
+  <% cache(cache_key_for_products) do %>
   <% @products.each do |product| %>
-    <%= render product %>
+  <%= render product %>
+  <% end %>
   <% end %>
 </div>
 
 <% if signed_in? && current_user.admin? %>
-  <%= link_to 'New Product', new_product_path %>
+<%= link_to 'New Product', new_product_path %>
 <% end %>
