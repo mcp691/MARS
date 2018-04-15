@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
+  url: postgres://bxzlbrqydynwkg:1f6c7d49758a4b93f8aa2fcd40f0e9ba9ce1409449a35251e4f04804182d95bb@ec2-54-243-28-109.compute-1.amazonaws.com:5432/dfbtndpfu7kj87
   channel_prefix: Project2_production
