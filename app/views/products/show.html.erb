@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" data-product-id="<%= @product.id %>">
   <% cache @product do %>
   <%= image_tag(@product.image_url, width: "525", class: "img-fluid img-zoom", data_zoom_image: @product.image_url) %>
   <div class="prod-desc">
