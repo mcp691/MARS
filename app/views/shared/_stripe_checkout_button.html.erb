@@ -3,8 +3,8 @@
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
     data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-    data-name="<%= @product.name %>"
-    data-description="<%= @product.description %>"
+    data-name="MARS"
+    data-description="Men's Clothing and Gift Marketplace"
     data-amount="<%= @product.price %>">
   </script>
 </form>
