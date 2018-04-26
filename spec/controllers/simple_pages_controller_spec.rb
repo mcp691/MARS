@@ -9,4 +9,21 @@ describe SimplePagesController, type: :controller do
       expect(response).to render_template('index')
     end
   end
+
+  context 'GET #about' do
+    it 'renders the about template' do
+      get :about
+      expect(response).to be_ok
+      expect(response).to render_template('about')
+    end
+  end
+
+  context 'GET #contact' do
+    it 'renders the contact template' do
+      get :contact
+      expect(response).to be_ok
+      expect(response).to render_template('contact')
+    end
+  end
+
 end

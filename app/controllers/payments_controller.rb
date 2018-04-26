@@ -10,6 +10,7 @@ class PaymentsController < ApplicationController
         amount: 2000, # amount in cents, again
         currency: "usd",
         source: token,
+        customer: @user,
         description: params[:stripeEmail]
       )
 
@@ -23,7 +24,6 @@ class PaymentsController < ApplicationController
       err = body[:error]
       flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
     end
-    redirect_to product_path(@product)
   end
 
 end
