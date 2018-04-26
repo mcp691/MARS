@@ -19,4 +19,8 @@ it "is not valid without a name" do
   expect(Product.new(description: "Works fine!")).not_to be_valid
 end
 
+it "cannot be created without image" do
+  expect(Product.new(name: "red tie", category: "tie")).not_to be_valid
+end
+
 end
