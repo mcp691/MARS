@@ -3,7 +3,6 @@ require 'rails_helper'
 describe Product do
 
 let(:product) { Product.create!(name: "red tie", image_url: "/photo.jpeg", category: "tie") }
-let(:user) { User.create!(email: "test@test.com", password: "testtest") }
 
 before do
   product.comments.create!(rating: 1, user: user, body: "Awful!")
