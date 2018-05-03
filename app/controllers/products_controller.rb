@@ -80,11 +80,11 @@ end
     end
 
     def page_views
-      $redis.hget(:product_view_count, @product.id) || 0
+      $redis.hget(:product_page_views, @product.id) || 0
     end
 
     def update_page_views
-      $redis.hincrby(:product_view_count, @product.id, 1)
+      $redis.hincrby(:product_page_views, @product.id, 1)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
