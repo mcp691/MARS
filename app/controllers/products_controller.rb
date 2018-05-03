@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :update_page_views, only: :show
 
   # GET /products
   # GET /products.json
@@ -17,6 +18,7 @@ end
   # GET /products/1
   # GET /products/1.json
   def show
+    @page_views = page_views
     @comments = @product.comments.order("created_at DESC")
     @comments = @product.comments.paginate(page: params[:page], per_page: 2)
   end
@@ -75,6 +77,14 @@ end
     # Use callbacks to share common setup or constraints between actions.
     def set_product
       @product = Product.find(params[:id])
+    end
+
+    def page_views
+      $redis.hget(:product_view_count, @product.id) || 0
+    end
+
+    def update_page_views
+      $redis.hincrby(:product_view_count, @product.id, 1)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
